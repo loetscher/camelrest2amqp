@@ -1,0 +1,22 @@
+spring:
+  artemis:
+    host: localhost
+    port: 61616
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: scg
+    password: scg
+
+logging:
+  file:
+    path: './logs/'
+  level:
+    org.apache.camel: DEBUG
+    web: DEBUG
+
+camel:
+  component:
+    servlet:
+      mapping:
+        enabled: true
+        context-path: /rest/*
